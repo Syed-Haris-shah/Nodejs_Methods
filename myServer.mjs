@@ -27,9 +27,6 @@ const myServer = createServer((req, res)=>{
         res.writeHead(404, {'Content-type': 'text/plain'})
         res.end('404 Page Not Found.!')
     }
-
-    // res.end('hello')
-
 })
 
 myServer.listen(PORT,()=>{
