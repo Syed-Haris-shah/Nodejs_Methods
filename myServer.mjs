@@ -4,7 +4,19 @@ const PORT = 3000
 
 const myServer = createServer((req, res)=>{
 
-    res.end('hello')
+    // const METHOD = req.method
+    const URL = req.url
+
+    if (URL === '/') {
+
+        res.writeHead(200, {'Content-type': 'text/plain'})
+        res.end('This is Home Page.')
+    }else {
+        res.writeHead(404, {'Content-type': 'text/plain'})
+        res.end('404 Page Not Found.!')
+    }
+
+    // res.end('hello')
 
 })
 
