@@ -11,7 +11,14 @@ const myServer = createServer((req, res)=>{
 
         res.writeHead(200, {'Content-type': 'text/plain'})
         res.end('This is Home Page.')
-    }else {
+
+    } else if (URL === '/about') {
+        
+        res.writeHead(200, {'Content-type': 'text/plain'})
+        res.end('This is About Page.')
+    }
+    
+    else {
         res.writeHead(404, {'Content-type': 'text/plain'})
         res.end('404 Page Not Found.!')
     }
